@@ -23,4 +23,4 @@ def main(argv):
     plot_graph(time_list, line_list)
 
 if __name__ == '__main__':
-	sys.exit(main(sys.argv))
+    sys.exit(main(sys.argv))
