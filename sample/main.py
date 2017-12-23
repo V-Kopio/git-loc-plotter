@@ -1,5 +1,5 @@
 import sys
-from git_data_collector import change_collector, branch_history
+from git_data_collector import extract_diff_summary, branch_history
 
 def main(argv):
     total_lines = 0
@@ -12,7 +12,7 @@ def main(argv):
         if line[0] != ' ':
             commit_id, time = line.strip('\'').split(" ", 1)
         else:
-            data = change_collector(line)
+            data = extract_diff_summary(line)
 
             total_lines += data['insertions'] - data['deletions']
 

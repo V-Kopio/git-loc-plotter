@@ -1,7 +1,7 @@
 import subprocess
 import re
 
-def change_collector(string):
+def extract_diff_summary(string):
     regex_matches = re.match(
         r"( (?P<files>\d+) files? changed)"
         r"(, (?P<insertions>\d+) insertions?\(\+\))?"
