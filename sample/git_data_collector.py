@@ -19,6 +19,7 @@ def extract_diff_summary(string):
 def branch_history():
     git = subprocess.Popen(
         ["git", "log", "--shortstat", "--reverse", "--pretty=format:'%H %at'"],
+        universal_newlines=True,
         stdout=subprocess.PIPE
     )
 
