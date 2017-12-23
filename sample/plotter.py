@@ -1,8 +1,8 @@
 from datetime import datetime
 import matplotlib.pyplot as plt
 
-def plot_graph(x, y):
+def plot_with_date(date, value):
     plt.figure(figsize=(20, 10))
-    plt.plot(x, y)
+    plt.plot(date, value)
     plt.ylim(ymin=0)
     plt.show()
