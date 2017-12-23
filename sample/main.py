@@ -1,5 +1,6 @@
 import sys
 from git_data_collector import extract_diff_summary, branch_history
+from plotter import plot_graph
 
 def main(argv):
     total_lines = 0
@@ -19,7 +20,7 @@ def main(argv):
             time_list.append(time)
             line_list.append(total_lines)
 
-            print "%s, %s: %d lines" % (commit_id, time, total_lines)
+    plot_graph(time_list, line_list)
 
 if __name__ == '__main__':
 	sys.exit(main(sys.argv))
