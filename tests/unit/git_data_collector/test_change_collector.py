@@ -1,5 +1,5 @@
 import unittest
-from sample.git_data_collector import change_collector
+from src.git_data_collector import change_collector
 
 class TestChangeCollector(unittest.TestCase):
 
